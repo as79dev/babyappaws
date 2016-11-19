@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>demode.as79dev.babyappaws</name>
+	<name>de.as79dev.babyappaws</name>
 	<description>AWS BabyApp with Spring Boot</description>
 
 	<parent>
@@ -25,6 +25,11 @@
 	</properties>
 
 	<dependencies>
+	
+	    <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-aws-jdbc</artifactId>
