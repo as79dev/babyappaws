@@ -1,0 +1,17 @@
+CREATE TABLE baby (
+    babyid        SERIAL PRIMARY KEY,
+    vorname       varchar(200) NOT NULL,
+    nachname      varchar(200) NOT NULL,
+    birthdate   date);
+
+CREATE TABLE diary_entry (
+     diary_entry_id        SERIAL PRIMARY KEY,
+     entry_date   date,
+     text   varchar(500) NOT NULL,
+     babyid integer REFERENCES baby (babyid)
+);
+
+insert into baby  ("vorname", "nachname", "birthdate") values ('Max', 'Schleif', '2016-01-12') 
+insert into baby  ("vorname", "nachname", "birthdate") values ('Dorothee', 'Schleif', '2016-01-13') 
+
+select * from baby
